@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página educativa sobre la expresión latina 'et cetera' con imágenes, videos, historia y más.">
+  <meta name="keywords" content="et cetera, etc, expresión latina, significado, historia, lingüística">
+  <meta name="author" content="Equipo Et Cetera">
+  <title>Et Cetera - Página Principal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #121212;
+      --text-light: #1a1a1a;
+      --text-dark: #e0e0e0;
+      --primary: #512da8;
+      --secondary: #9575cd;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: padding 0.3s;
+    }
+
+    .compressed-header {
+      padding: 5px 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      transition: opacity 0.3s, font-size 0.3s;
+    }
+
+    .hide-title h1 {
+      opacity: 0;
+      font-size: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: var(--secondary);
+      width: 100%;
+      transition: top 0.3s;
+    }
+
+    nav a {
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: #7e57c2;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      scroll-margin-top: 100px;
+    }
+
+    .gallery, .team, .videos, .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      color: #000;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    body.dark .card {
+      background: #2c2c2c;
+      color: #f0f0f0;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    img, iframe {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      margin: auto;
+    }
+
+    iframe {
+      height: 250px;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: var(--secondary);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      nav a {
+        flex: 1 0 100%;
+        text-align: center;
+      }
+      iframe {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">Cambiar tema</button>
+  <header id="main-header">
+    <h1>ET CETERA</h1>
+    <nav>
+      <a href="#intro">Introducción</a>
+      <a href="#galeria">Galería</a>
+      <a href="#videos">Videos</a>
+      <a href="#historia">Historia</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#relevante">Relevante</a>
+      <a href="#sitios">Sitios</a>
+      <a href="#curiosidades">Curiosidades</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>¿Qué significa Et Cetera?</h2>
+    <p>"Et cetera" es una locución latina que significa literalmente "y lo demás" o "y las otras cosas". Se usa para indicar que una lista continúa de forma similar, y es abreviada como "etc.". Esta expresión ha sido utilizada desde la antigüedad para evitar redundancias en la escritura y se ha mantenido vigente en muchos idiomas actuales.</p>
+  </section>
+
+  <section id="historia">
+    <h2>Historia de la expresión</h2>
+    <p>Su origen se remonta a la Roma antigua, donde los escribas la usaban comúnmente. Con la invención de la imprenta, su uso se estandarizó. Hoy en día, se encuentra en textos legales, científicos, tecnológicos y cotidianos, manteniendo su utilidad a través de los siglos.</p>
+  </section>
+
+  <section id="galeria" class="gallery">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Latin_Manuscript_13th_century.jpg" alt="Manuscrito medieval">
+      <p>Los escribas medievales utilizaban abreviaturas como "etc." para ahorrar espacio en manuscritos.</p>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Gutenberg_Bible.jpg" alt="Imprenta de Gutenberg">
+      <p>La imprenta de Gutenberg ayudó a difundir el uso de "etc." ampliamente en la literatura impresa.</p>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Code_Sample.jpg" alt="Código fuente con etc.">
+      <p>En la era digital, "etc." sigue siendo útil en interfaces, código y comunicación técnica.</p>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/MultiLanguage.jpg" alt="Variaciones lingüísticas">
+      <p>Diversas culturas han adoptado "etc." y su equivalente en sus idiomas y alfabetos.</p>
+    </div>
+  </section>
+
+  <section id="videos" class="videos">
+    <div class="card">
+      <h3>Historia y Evolución de 'Et Cetera'</h3>
+      <iframe src="https://www.youtube.com/embed/h6fcK_fRYaI" title="Historia y evolución de Et Cetera" allowfullscreen></iframe>
+      <p>Explora el recorrido histórico de la expresión desde su origen hasta el presente.</p>
+    </div>
+    <div class="card">
+      <h3>Usos Correctos e Incorrectos</h3>
+      <iframe src="https://www.youtube.com/embed/8Gv0H-vPoDc" title="Uso correcto de etc." allowfullscreen></iframe>
+      <p>Aprende cuándo y cómo usar correctamente "etc." para mejorar tu redacción.</p>
+    </div>
+  </section>
+
+  <section id="equipo" class="team">
+    <div class="card">
+      <h3>Equipo Et Cetera</h3>
+      <p>Somos un grupo de entusiastas de la lengua y cultura latina dedicados a difundir el conocimiento sobre expresiones clásicas como "et cetera".</p>
+    </div>
+  </section>
+
+  <section id="relevante">
+    <h2>Información Relevante</h2>
+    <table>
+      <tr><th>Campo</th><th>Uso de "etc."</th></tr>
+      <tr><td>Legal</td><td>Para referirse a cláusulas similares o artículos relacionados.</td></tr>
+      <tr><td>Científico</td><td>Al enumerar materiales, procesos o ejemplos conocidos.</td></tr>
+      <tr><td>Educativo</td><td>Facilita la comprensión de listas extensas en ejemplos.</td></tr>
+    </table>
+  </section>
+
+  <section id="sitios">
+    <h2>Sitios de Interés</h2>
+    <ul>
+      <li><a href="https://es.wikipedia.org/wiki/Et_cetera" target="_blank">Wikipedia - Et cetera</a></li>
+      <li><a href="https://www.rae.es/dpd/etc" target="_blank">RAE - Diccionario panhispánico de dudas</a></li>
+      <li><a href="https://latin-dictionary.net/definition/13658/et-cetera" target="_blank">Diccionario latino</a></li>
+    </ul>
+  </section>
+
+  <section id="curiosidades">
+    <h2>Datos Curiosos</h2>
+    <ul>
+      <li>La abreviatura "etc." ha sido usada desde antes del siglo I.</li>
+      <li>En griego moderno, se utiliza una expresión similar: "kai ta loipa".</li>
+      <li>En muchos textos científicos, se recomienda evitar su uso excesivo.</li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 100) {
+        header.classList.add('hide-title');
+        header.classList.add('compressed-header');
+      } else {
+        header.classList.remove('hide-title');
+        header.classList.remove('compressed-header');
+      }
+    });
+  </script>
+</body>
+</html>
